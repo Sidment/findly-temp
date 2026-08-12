@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/support",
+      "destination": "https://discord.gg/3SQtVC3JNu",
+      "permanent": true
+    },
+    {
+      "source": "/legal/(.*)",
+      "destination": "https://discord.gg/3SQtVC3JNu",
+      "permanent": true
+    }
+  ]
+}
