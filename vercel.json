@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/legal/:path*", "destination": "/discord-redirect.html" },
-    { "source": "/support", "destination": "/discord-redirect.html" }
+    { "source": "/legal/:path*", "destination": "/redirectScreen.html" },
+    { "source": "/support", "destination": "/redirectScreen.html" }
   ]
 }
