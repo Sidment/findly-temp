@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>findly.lol</title>
+<meta name="description" content="Page not found.">
+<style>
+  html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a0a;
+    color: #ffffff;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .code {
+    font-size: clamp(48px, 10vw, 84px);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+  }
+  p {
+    font-size: clamp(14px, 2vw, 17px);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 500px;
+    margin: 0;
+  }
+  a {
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 2px;
+  }
+  a:hover {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.7);
+  }
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  svg {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .domain {
+    position: fixed;
+    bottom: 24px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.4);
+    z-index: 1;
+  }
+  .glow {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    max-width: 150vw;
+    height: 500px;
+    background: radial-gradient(ellipse at top, rgba(220, 38, 38, 0.35) 0%, rgba(220, 38, 38, 0.12) 40%, rgba(220, 38, 38, 0) 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="wrap">
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <path d="m21 21-4.3-4.3"></path>
+      <path d="M8 11h6"></path>
+    </svg>
+    <p class="code">404</p>
+    <p>This page doesn't exist or may have been moved.</p>
+    <a href="/">Back to home</a>
+  </div>
+  <div class="domain">findly.lol • Find your next creator.</div>
+</body>
+</html>
