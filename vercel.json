@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/secret*", "destination": "/secret.html" },
+    { "source": "/secret", "destination": "/secret.html" },
     { "source": "/legal/:path*", "destination": "/redirectScreen.html" },
     { "source": "/support", "destination": "/redirectScreen.html" }
   ]
