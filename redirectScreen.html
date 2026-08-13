@@ -39,6 +39,23 @@
     color: #ffffff;
     border-color: rgba(255, 255, 255, 0.7);
   }
+  .back {
+    margin-top: 4px;
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+  }
+  .back:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
   .wrap {
     display: flex;
     flex-direction: column;
@@ -79,14 +96,15 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
       <path d="M21 12a9 9 0 1 1-2.64-6.36"></path>
     </svg>
-    <p>Redirecting in <span class="count" id="count">3</span>s.<br>If nothing happens, <a id="link" href="#">click here</a>.</p>
+    <p>Redirecting in <span class="count" id="count">10</span>s.<br>If nothing happens, <a id="link" href="#">click here</a>.</p>
+    <button class="back" id="back">Go back</button>
   </div>
 
   <script>
     var destination = "https://discord.com/invite/3SQtVC3JNu";
     document.getElementById("link").href = destination;
 
-    var seconds = 3;
+    var seconds = 10;
     var countEl = document.getElementById("count");
     var timer = setInterval(function () {
       seconds -= 1;
@@ -96,6 +114,15 @@
         window.location.replace(destination);
       }
     }, 1000);
+
+    document.getElementById("back").addEventListener("click", function () {
+      clearInterval(timer);
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = "/";
+      }
+    });
   </script>
 </body>
 </html>
